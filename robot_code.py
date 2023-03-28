@@ -258,5 +258,5 @@ while True:
     if event == sg.WIN_CLOSED:
         break
 
-window.close()
+window.close() 
 ser.write(str.encode(str(0) + str(0) + str(0)))
