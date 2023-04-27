@@ -166,6 +166,10 @@ def p4(pressed):
     for i in pressed:
         if int(i[0]) < 49:
             pressed_button(str(i[0]),int(i[1]))
+def p5(pressed):
+    for i in pressed:
+        if int(i[0]) < 49:
+            pressed_button(str(i[0]),int(i[1]))
 
 def down_arrow(temp):
     #temp = int(temp)
@@ -254,8 +258,7 @@ def unpressed_button(y):
     
 img = sg.Image(filename="/home/pi/Downloads/djem.png")
 
-Top_Text = [img],[sg.Text(text="Djembot",font = 15,pad=10), sg.Text("File Name:", font = 15,pad=10), sg.InputText("Default", key="file_name", font = 15,pad=10), sg.Button('Anthony', key = 'p1',font=15),sg.Button('Murray', key = 'p2',font=15),sg.Button('Marcel', font=15,key = 'p3'),sg.Button('Kalani', font=15,key = 'p4')]
-    
+Top_Text = [img],[sg.Text(text="Djembot",font = 15,pad=10), sg.Text("File Name:", font = 15,pad=10), sg.InputText("Default", key="file_name", font = 15,pad=10), sg.Button('Anthony', key = 'p1',font=15),sg.Button('Kristina', key='p5',font=15), sg.Button('Murray', key = 'p2',font=15),sg.Button('Marcel', font=15,key = 'p3'),sg.Button('Kalani', font=15,key = 'p4')]
 sg.theme('DarkRed')
 
 
@@ -364,6 +367,10 @@ while True:
         pressed.clear()
         pressed = [['17', 3], ['18', 2], ['22', 3], ['23', 2], ['25', 3], ['26', 2], ['4', 1], ['8', 1], ['11', 3], ['44', 3], ['45', 2], ['46', 3], ['15', 3], ['48', 3]]
         p4(pressed)
+    if event == 'p5':
+        pressed.clear()
+        pressed = [['1', 3], ['18', 3], ['3', 2], ['20', 2], ['5', 1], ['22', 1], ['7', 3], ['24', 3], ['9', 2], ['26', 2], ['11', 1], ['28', 1], ['13', 3], ['30', 3], ['15', 2], ['32', 3]]
+        p5(pressed)
    # if event == "Update":
     #    update_file(values['step_input'])
 
